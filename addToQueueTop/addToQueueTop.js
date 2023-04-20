@@ -1,6 +1,8 @@
-(async function addToQueueTop() {
+(async function addToQueueTop(started) {
+  if (!started) console.time('addToQueueTop loaded successfully');
+
   if (!(Spicetify.Platform && Spicetify.CosmosAsync)) {
-    setTimeout(addToQueueTop, 300);
+    setTimeout(() => addToQueueTop(true), 300);
     return;
   }
 
@@ -14,7 +16,6 @@
         Type.ALBUM,
         Type.LOCAL,
         Type.EPISODE,
-        Type.SHOW,
       ].includes(Spicetify.URI.fromString(uri).type),
     );
 
@@ -41,4 +42,6 @@
     },
     shouldShowOption,
   ).register();
+
+  console.timeEnd('addToQueueTop loaded successfully');
 })();
