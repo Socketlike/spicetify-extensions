@@ -9,14 +9,9 @@
   const { Type } = Spicetify.URI;
   const shouldShowOption = (uris) =>
     uris.every((uri) =>
-      [
-        Type.TRACK,
-        Type.PLAYLIST,
-        Type.PLAYLIST_V2,
-        Type.ALBUM,
-        Type.LOCAL,
-        Type.EPISODE,
-      ].includes(Spicetify.URI.fromString(uri).type),
+      [Type.TRACK, Type.PLAYLIST, Type.PLAYLIST_V2, Type.ALBUM, Type.LOCAL, Type.EPISODE].includes(
+        Spicetify.URI.fromString(uri).type,
+      ),
     );
 
   new Spicetify.ContextMenu.Item(
@@ -26,6 +21,15 @@
         uris = (await Spicetify.Platform.PlaylistAPI.getContents(uris[0])).items.map(
           (item) => item.uri,
         );
+      else if (Spicetify.URI.fromString(uris[0]).type === Type.ALBUM)
+        uris = (
+          await (
+            await fetch(
+              `https://api.spotify.com/v1/albums/${Spicetify.URI.fromString(uris[0]).id}/tracks`,
+              { mode: 'cors' },
+            )
+          ).json()
+        ).items.map((item) => item.uri);
       const before = (Spicetify.Queue.nextTracks || []).filter(
         (track) => track.provider !== 'context',
       ).length;
