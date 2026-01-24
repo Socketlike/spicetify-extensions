@@ -1,9 +1,8 @@
 [
   {
-    "name": "Add To Queue Top",
-    "description": "Adds the ability to add a track | playlist to the top of your Queue, instantly playing it after the currently playing track ends.",
-    "main": "addToQueueTop/addToQueueTop.js",
-    "readme": "addToQueueTop/README.md",
-    "preview": "addToQueueTop/preview.gif"
+    "name": "priority queue",
+    "description": "queue your stuff at the top of the queue instead of the bottom",
+    "main": "priority-queue/priority-queue.js",
+    "readme": "priority-queue/README.md"
   }
 ]
