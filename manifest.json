@@ -2,8 +2,12 @@
   {
     "name": "priority queue",
     "description": "queue your stuff at the top of the queue instead of the bottom",
-    "main": "priority-queue/priority-queue.js",
-    "readme": "priority-queue/README.md",
-    "preview": "priority-queue/preview.gif"
+    "main": "./priority-queue/priority-queue.js",
+    "readme": "./priority-queue/README.md",
+    "preview": "./priority-queue/preview.gif",
+    "authors": {
+      "name": "Evie",
+      "url": "https://github.com/Socketlike"
+    }
   }
 ]
