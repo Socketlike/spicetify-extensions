@@ -5,10 +5,12 @@
     "main": "./priority-queue/priority-queue.js",
     "readme": "./priority-queue/README.md",
     "preview": "./priority-queue/preview.gif",
-    "authors": {
-      "name": "Evie",
-      "url": "https://github.com/Socketlike"
-    }
+    "authors": [
+      {
+        "name": "Evie",
+        "url": "https://github.com/Socketlike"
+      }
+    ]
   },
   {
     "name": "volume percentage (fork)",
