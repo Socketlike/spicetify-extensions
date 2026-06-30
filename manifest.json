@@ -9,5 +9,22 @@
       "name": "Evie",
       "url": "https://github.com/Socketlike"
     }
+  },
+  {
+    "name": "volume percentage (fork)",
+    "description": "displays a volume% label next to the volume bar and allows direct volume level editing",
+    "main": "./volume-percentage/volume-percentage.js",
+    "preview": "./volume-percentage/preview.png",
+    "readme": "./volume-percentage/README.md",
+    "authors": [
+      {
+        "name": "daksh2k",
+        "url": "https://github.com/daksh2k"
+      },
+      {
+        "name": "Evie",
+        "url": "https://github.com/Socketlike"
+      }
+    ]
   }
 ]
